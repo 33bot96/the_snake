@@ -87,7 +87,7 @@ class Snake(GameObject):
     def __init__(self) -> None:
         super().__init__()
         self.body_color: tuple[int, int, int] = SNAKE_COLOR
-        self.direction = choice(directions)  # Cлучайное направление змейки ^_^.
+        self.direction = choice(directions)  # Cлучайное направление змейки^_^.
         self.next_direction = None
         self.positions = [self.position]
         self.last = None
