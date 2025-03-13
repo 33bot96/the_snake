@@ -53,7 +53,6 @@ class GameObject:
 
     def draw(self):
         """Прорисовка объекта."""
-        pass
 
 
 class Apple(GameObject):
@@ -112,9 +111,11 @@ class Snake(GameObject):
 
     def update_direction(self):
         """Отвечает за направление движения."""
-        if self.next_direction:
-            self.direction = self.next_direction
-            self.next_direction = None
+        self.direction, self.next_direction = (
+            (self.next_direction, None)
+            if self.next_direction
+            else (self.direction, self.next_direction)
+        )
 
     def draw(self):
         """Отвечает за прорисовку."""
