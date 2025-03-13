@@ -111,7 +111,7 @@ class Snake(GameObject):
 
     def update_direction(self):
         """Отвечает за направление движения."""
-        self.direction, self.next_direction = (
+        self.direction, self.next_direction = (  # строк стало только больше:)
             (self.next_direction, None)
             if self.next_direction
             else (self.direction, self.next_direction)
