@@ -86,7 +86,7 @@ class Snake(GameObject):
     def __init__(self) -> None:
         super().__init__()
         self.body_color: tuple[int, int, int] = SNAKE_COLOR
-        self.direction = choice(directions)  # Cлучайное направление змейки^_^.
+        self.direction = choice(directions)
         self.next_direction = None
         self.positions = [self.position]
         self.last = None
@@ -111,10 +111,10 @@ class Snake(GameObject):
 
     def update_direction(self):
         """Отвечает за направление движения."""
-        if self.next_direction:  # это то что я должен был сделать?
+        if self.next_direction:
             self.direction, self.next_direction = (
                 self.next_direction, None
-            )  # 40ка минутная лекция по тернарным операторам коту под хвост(
+            )
 
     def draw(self):
         """Отвечает за прорисовку."""
